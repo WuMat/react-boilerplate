@@ -1,0 +1,75 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120,
+    "lineEnding": "lf"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded"
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true
+    }
+  },
+
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noUnusedTemplateLiteral": "error",
+        "noShoutyConstants": "error"
+      },
+      "complexity": {
+        "useSimpleNumberKeys": "error",
+        "noEmptyTypeParameters": "error",
+        "noThisInStatic": "error"
+      },
+      "nursery": {
+        "noValueAtRule": "error",
+        "noEnum": "error",
+        "noDynamicNamespaceImportAccess": "error"
+      },
+      "performance": {
+        "noDelete": "error",
+        "noBarrelFile": "error",
+        "noAccumulatingSpread": "error"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn",
+        "noSuspiciousSemicolonInJsx": "error",
+        "noImplicitAnyLet": "error",
+        "noGlobalIsFinite": "error",
+        "noGlobalIsNan": "error",
+        "noEvolvingTypes": "error",
+        "noExplicitAny": "error"
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "noVoidTypeReturn": "error",
+        "noUnusedFunctionParameters": "error",
+        "noUnnecessaryContinue": "error",
+        "noUndeclaredDependencies": "error",
+        "noRenderReturnValue": "error",
+        "noInvalidNewBuiltin": "error"
+      }
+    }
+  }
+}
