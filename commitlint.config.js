@@ -8,7 +8,6 @@ export default {
   parserPreset: {
     parserOpts: {
       referenceActions: null,
-      //   PUT Your issue prefix
       issuePrefixes: [],
     },
   },
