@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { AppSidebar } from '@/components/app-sidebar';
+import { AppSidebar } from '@/components/AppSidebar';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,10 +7,11 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { Separator } from '@/components/ui/separator';
-import { SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
-export default function Page() {
+} from '@/components/ui/Breadcrumb';
+import { Separator } from '@/components/ui/Separator';
+import { SidebarInset, SidebarTrigger } from '@/components/ui/Sidebar';
+
+function PageComponent() {
   return (
     <SidebarInset>
       <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
@@ -46,6 +47,9 @@ export default function Page() {
     </SidebarInset>
   );
 }
+
+export default PageComponent;
+
 export const Route = createFileRoute('/')({
-  component: Page,
+  component: PageComponent,
 });
