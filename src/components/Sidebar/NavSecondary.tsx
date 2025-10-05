@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import { type Icon } from '@tabler/icons-react';
 
@@ -9,7 +7,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
+} from '@/components/ui/Sidebar';
 
 export function NavSecondary({
   items,

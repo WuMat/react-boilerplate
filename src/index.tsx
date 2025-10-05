@@ -7,6 +7,7 @@ import './index.css';
 
 import { routeTree } from '@/routeTree.gen';
 import '@/translations/config';
+import i18n from 'i18next';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,6 +25,12 @@ declare module '@tanstack/react-router' {
     router: typeof router;
   }
 }
+
+// Set initial dir and lang attributes
+const initialLang = i18n.language || 'en';
+const isRTL = initialLang === 'ar';
+document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+document.documentElement.setAttribute('lang', initialLang);
 
 const rootEl = document.getElementById('root');
 if (rootEl) {

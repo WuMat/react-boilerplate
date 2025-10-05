@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import {
   AudioWaveform,
@@ -14,10 +12,11 @@ import {
   SquareTerminal,
 } from 'lucide-react';
 
-import { NavMain } from '@/components/NavMain';
-import { NavProjects } from '@/components/NavProjects';
-import { NavUser } from '@/components/NavUser';
-import { TeamSwitcher } from '@/components/TeamSwitcher';
+import { NavMain } from '@/components/Sidebar/NavMain';
+import { NavProjects } from '@/components/Sidebar/NavProjects';
+import { NavUser } from '@/components/Sidebar/NavUser';
+import { TeamSwitcher } from '@/components/Sidebar/TeamSwitcher';
+import { LanguageSwitcher } from '@/components/Sidebar/LanguageSwitcher';
 import {
   Sidebar,
   SidebarContent,
@@ -161,6 +160,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
+        <LanguageSwitcher />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />

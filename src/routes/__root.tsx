@@ -1,12 +1,16 @@
-import { AppSidebar } from '@/components/AppSidebar';
+import { AppSidebar } from '@/components/Sidebar/AppSidebar';
 import { SidebarProvider } from '@/components/ui/Sidebar';
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
+import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import { useTranslation } from 'react-i18next';
 
 function RootComponent() {
+  const { i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar side={isRTL ? 'right' : 'left'} />
       <Outlet />
       <TanStackRouterDevtools />
     </SidebarProvider>
